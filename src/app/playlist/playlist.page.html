@@ -1,51 +1,38 @@
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>playlist</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">playlist</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content> -->
+	<div class="playlist-view">
+		<div class="user-container">
+			
+			<div class="user-data">
+				<img src="/assets/images/avatar.jpg" class="avatar">
+				<label class="user-email">johndoe&#64;gmail.com</label>
+				<label class="user-name">John Doe</label>
+			</div>
 
+			<div class="status-container">
+				<div class="status">
+					<label class="status-value">1243</label>
+					<label class="status-label">Followers</label>
+				</div>
 
-  <!-- The dummy player stacked above the tabs -->
-  <div class="player">
-    <div class="progress-bar">
-      <div class="progress" [style.width]="progress + '%'"></div>
-    </div>
-    <ion-row class="ion-no-padding">
-      <ion-col size="2" class="ion-no-padding">
-        <img src="/assets/images/albums/when-we-all-fall-asleep.jpg">
-      </ion-col>
-      <ion-col size="8" class="ion-align-self-center">
-        <b>All the Good Girls Go to Hell</b><br>
-        <span>Billie Eilish</span>
-      </ion-col>
-      <ion-col size="2" class="ion-text-center ion-no-padding ion-align-self-center">
-        <ion-icon name="play-sharp" color="light" size="large"></ion-icon>
-      </ion-col>
-    </ion-row>
-  </div>
+				<div class="status">
+					<label class="status-value">779</label>
+					<label class="status-label">Following</label>
+				</div>
+			</div>
+		</div>
 
-  <!-- The Ionic tab bar -->
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1">
-      <ion-icon [name]="selected == 'tab1' ? 'home' : 'home-outline'"></ion-icon>
-      <ion-label>Home</ion-label>
-    </ion-tab-button>
+		<div class="playlist-container">
 
-    <ion-tab-button tab="tab2">
-      <ion-icon [name]="selected == 'tab2' ? 'search' : 'search-outline'"></ion-icon>
-      <ion-label>Search</ion-label>
-    </ion-tab-button>
+			<h3>Public Playists</h3>
+			
+			<div class="song-container" *ngFor="let song of tracklist">
+				<img src="/assets/images/cover.jpg" class="album-art">
+				<label class="title">{{ song.title }}</label>
+				<label class="artist">{{ song.artist }}</label>
+			</div>
 
-    <ion-tab-button tab="tab3">
-      <ion-icon [name]="selected == 'tab3' ? 'library' : 'library-outline'"></ion-icon>
-      <ion-label>Library</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+	
+		</div>
+	</div>
+ 
+</ion-content>

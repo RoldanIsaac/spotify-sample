@@ -32,6 +32,33 @@ export class PlaylistPage implements OnInit {
   selected: string | undefined;
   progress = 42;
 
+  tracklist = [
+    {
+      title: 'The New Sound',
+      artist: 'Jane Remover'
+    },
+    {
+      title: 'The New Sound',
+      artist: 'Jane Remover'
+    },
+    {
+      title: 'The New Sound',
+      artist: 'Jane Remover'
+    },
+    {
+      title: 'The New Sound',
+      artist: 'Jane Remover'
+    },
+    {
+      title: 'The New Sound',
+      artist: 'Jane Remover'
+    },
+    {
+      title: 'The New Sound',
+      artist: 'Jane Remover'
+    },
+  ]
+
 
   setSelectedTab() {
     this.selected = this.tabs?.getSelected();

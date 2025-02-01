@@ -35,10 +35,6 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
-
-ion-content {
-  --background: var(--ion-color-dark);
-}
  
 ion-content {
   --background: transparent; /* Ion content transparent */
@@ -63,7 +59,11 @@ ion-content {
    src: url('/assets/fonts/spotify-light.ttf');
  }
 
- .spotify-logo {
+// --------------------------------------------------------------
+//  @ Login Styles
+// --------------------------------------------------------------
+
+.spotify-logo {
    z-index: 9999;
    position: absolute;
    top: -70px;
@@ -188,4 +188,96 @@ ion-content {
 .register-label{
   line-height: 80px;
   transform: translateY(80px) !important;
+}
+
+
+// --------------------------------------------------------------
+//  @ Play List Styles
+// --------------------------------------------------------------
+
+
+.playlist-view {
+  height: 100%;               
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  background-color: white !important;           
+  text-align: center;          
+  padding: 20px;
+  border-radius: 50px;        
+}
+
+.user-container{
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
+  width: 120%;
+  border-radius: 130px;
+  height: 600px;
+  transform: translateY(-140px);
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
+}
+
+.user-data{
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.avatar{
+  --side: 50px;
+  min-width: var(--side);
+  max-width: var(--side);
+  min-width: var(--side);
+  max-width: var(--side);
+  border-radius: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.user-email{
+  color: #686363;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.user-name{
+  color: black;
+  font-weight: 600;
+  font-size: 23px; 
+}
+
+.status-container{
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  justify-content: space-around;
+}
+
+.status{
+  display: flex;
+  flex-direction: column;
+}
+
+.status-value{
+  color: black;
+  font-size: 25px;
+}
+.status-label{
+  color: black;
+  font-size: 21px;
+  font-weight: 100 !important;
+}
+
+.song-container{
+  max-height: 50px;
+  color: black;
+}
+
+.album-art{
+  width: 40px;
+  height: 40px;
 }
