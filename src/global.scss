@@ -98,6 +98,10 @@ ion-content {
     background-color: rgba(217, 217, 217, 0.2);
     color: white !important;
   }
+  > input::placeholder {
+    color: white !important;
+    opacity: 1;
+  }
 }
 
 .sign-in-container{
