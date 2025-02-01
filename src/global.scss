@@ -59,6 +59,28 @@ ion-content {
    src: url('/assets/fonts/spotify-light.ttf');
  }
 
+ @font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("/assets/fonts/Inter-roman.var.woff2");
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("/assets/fonts/Inter-italic.var.woff2");
+}
+
+*{
+  font-family: Inter var;
+}
+
 // --------------------------------------------------------------
 //  @ Login Styles
 // --------------------------------------------------------------
@@ -243,7 +265,7 @@ ion-content {
 
 .user-email{
   color: #686363;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 16px;
 }
 
@@ -290,7 +312,7 @@ ion-content {
   > h3 {
     color: #3A3232;
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 20px;
     transform: translateX(-118px);
   }
@@ -311,18 +333,18 @@ ion-content {
   > div {
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 8px;
     > :first-child {
       font-weight: 600;
     }
     > :last-child {
-      font-weight: lighter;
+      font-weight: 300 !important;
       transform: translateX(-7px);
     }
   }
   > span {
     line-height: 20px;
-    font-weight: 100;
+    font-weight: 200 !important;
     margin: auto;
     color: #686363;
   }
