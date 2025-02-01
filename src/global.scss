@@ -35,3 +35,111 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+ion-content {
+  --background: var(--ion-color-dark);
+}
+ 
+ion-content {
+  --background: transparent; /* Ion content transparent */
+}
+
+ @font-face {
+   font-family: 'Spotify';
+   font-style: normal;
+   font-weight: normal;
+   src: url('/assets/fonts/spotify-regular.ttf');
+ }
+ 
+ @font-face {
+   font-family: 'Spotify';
+   font-weight: bold;
+   src: url('/assets/fonts/spotify-bold.ttf');
+ }
+ 
+ @font-face {
+   font-family: 'Spotify';
+   font-weight: lighter;
+   src: url('/assets/fonts/spotify-light.ttf');
+ }
+
+ .spotify-logo {
+   z-index: 9999;
+   position: absolute;
+   top: -70px;
+   left: 10px;
+}
+
+.spotify-logo-login {
+  transform: scale(0.4);
+}
+ 
+.background-container {
+  background-image: url('/assets/images/bg.jpg');
+  background-size: cover;   /* Cover all the container */
+  background-position: center;  /* Center image */
+  height: 100%;               
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;             
+  text-align: center;          
+  padding: 20px;
+  border-radius: 50px;        
+}
+
+.input-container{
+  > input {
+    width: 344px;
+    border-radius: 40px;
+    padding: 36px;
+    border: solid 1px #bbaaaa;
+    background-color: rgba(217, 217, 217, 0.2);
+  }
+}
+
+.sign-in-label{
+  font-weight: 700;
+  font-size: 23px;
+  color: #ffffff;
+}
+
+.social-login-container{
+  z-index: 9999;
+  position: absolute;
+  top: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn{
+  width: 344px;
+  border-radius: 40px;
+  padding: 36px;
+  background-color: #18D780;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+.accent{
+  font-weight: 400;
+  font-size: 14px;
+  color: #48E73F;
+}
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.secondary-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.rec-pass-label{
+  line-height: 80px;
+  transform: translateX(400px) !important;
+}
