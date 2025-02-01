@@ -231,13 +231,13 @@ ion-content {
 }
 
 .avatar{
-  --side: 70px;
+  // object-fit: cover !important;
+  --side: 85px;
   min-width: var(--side);
   max-width: var(--side);
-  min-width: var(--side);
-  max-width: var(--side);
+  min-height: var(--side);
+  max-height: var(--side);
   border-radius: 100%;
-  display: block;
   margin-bottom: 1rem;
 }
 
@@ -316,6 +316,7 @@ ion-content {
     line-height: 20px;
     font-weight: 100;
     margin: auto;
+    color: #686363;
   }
 } 
 
