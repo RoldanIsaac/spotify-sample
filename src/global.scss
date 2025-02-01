@@ -114,7 +114,7 @@ ion-content {
   color: #ffffff;
 }
 
-.sign-in-label{
+.sign-in-label, .register-label{
   font-weight: 400;
   font-size: 14px;
   color: #ffffff;
@@ -132,7 +132,10 @@ ion-content {
   top: 80%;
   display: flex;
   flex-direction: row;
+  gap: 100px;
+  left: 30%;
 }
+
 
 .btn{
   width: 344px;
@@ -180,4 +183,9 @@ ion-content {
 
 .or-label::after{
   right: 0px;
+}
+
+.register-label{
+  line-height: 80px;
+  transform: translateY(80px) !important;
 }
