@@ -195,7 +195,6 @@ ion-content {
 //  @ Play List Styles
 // --------------------------------------------------------------
 
-
 .playlist-view {
   height: 100%;               
   display: flex;
@@ -208,14 +207,18 @@ ion-content {
   border-radius: 50px;        
 }
 
+// --------------------------------------------------------------
+//  @ User Container
+// --------------------------------------------------------------
+
 .user-container{
   padding-top: 180px;
   display: flex;
   flex-direction: column;
   width: 120%;
   border-radius: 130px;
-  height: 600px;
-  transform: translateY(-140px);
+  height: 520px;
+  transform: translateY(-310px);
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
 }
 
@@ -228,7 +231,7 @@ ion-content {
 }
 
 .avatar{
-  --side: 50px;
+  --side: 70px;
   min-width: var(--side);
   max-width: var(--side);
   min-width: var(--side);
@@ -253,8 +256,8 @@ ion-content {
 .status-container{
   display: flex;
   flex-direction: row;
-  gap: 0px;
-  justify-content: space-around;
+  gap: 100px;
+  justify-content: center;
 }
 
 .status{
@@ -277,7 +280,46 @@ ion-content {
   color: black;
 }
 
+// --------------------------------------------------------------
+//  @ PlayList Container
+// --------------------------------------------------------------
+
+.playlist-container{
+  transform: translateY(180px);
+  width: 97%;
+  > h3 {
+    color: #3A3232;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transform: translateX(-118px);
+  }
+  position: absolute;
+}
+
 .album-art{
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+}
+
+.song-container{
+  margin: 0.875rem;
+  // padding: 6px 0 6px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+  > span {
+    line-height: 20px;
+    font-weight: 100;
+    margin: auto;
+  }
+} 
+
+.artist{
+  font-size: 16px;
+  font-weight: lighter !important;
 }

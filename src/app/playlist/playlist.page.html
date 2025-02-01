@@ -27,8 +27,11 @@
 			
 			<div class="song-container" *ngFor="let song of tracklist">
 				<img src="/assets/images/cover.jpg" class="album-art">
-				<label class="title">{{ song.title }}</label>
-				<label class="artist">{{ song.artist }}</label>
+				<div>
+					<label class="title">{{ song.title }}</label>
+					<label class="artist">{{ song.artist }}</label>
+				</div>
+				<span> 3:07 </span>
 			</div>
 
 	
