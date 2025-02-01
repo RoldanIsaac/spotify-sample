@@ -89,19 +89,37 @@ ion-content {
 }
 
 .input-container{
+  padding: 10px 0 10px 0;
   > input {
     width: 344px;
     border-radius: 40px;
     padding: 36px;
     border: solid 1px #bbaaaa;
     background-color: rgba(217, 217, 217, 0.2);
+    color: white !important;
   }
 }
 
-.sign-in-label{
+.sign-in-container{
+    transform: translateY(-70px);
+}
+
+.sign-in-header{
   font-weight: 700;
   font-size: 23px;
   color: #ffffff;
+}
+
+.sign-in-label{
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.accent{
+  font-weight: inherit;
+  font-size: inherit;
+  color: #48E73F;
 }
 
 .social-login-container{
@@ -120,12 +138,6 @@ ion-content {
   font-weight: 700;
   font-size: 20px;
   color: white;
-}
-
-.accent{
-  font-weight: 400;
-  font-size: 14px;
-  color: #48E73F;
 }
 
 .login-container{
