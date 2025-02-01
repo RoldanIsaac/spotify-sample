@@ -71,7 +71,7 @@ ion-content {
 }
 
 .spotify-logo-login {
-  transform: scale(0.4);
+  transform: scale(0.35);
 }
  
 .background-container {
@@ -105,7 +105,7 @@ ion-content {
 }
 
 .sign-in-container{
-    transform: translateY(-70px);
+    transform: translateY(-50px);
 }
 
 .sign-in-header{
@@ -158,4 +158,26 @@ ion-content {
 .rec-pass-label{
   line-height: 80px;
   transform: translateX(400px) !important;
+}
+
+.or-label{
+  line-height: 5rem;
+  position: relative;
+}
+
+
+.or-label::before, .or-label::after{
+  position: absolute;
+  content: '';
+  border: solid 0.5px rgba($color: #ffffff, $alpha: 0.6);
+  width: 150px;
+  top: 40px;
+}
+
+.or-label::before{
+  left: 0px;
+}
+
+.or-label::after{
+  right: 0px;
 }
