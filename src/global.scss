@@ -307,10 +307,18 @@ ion-content {
   // padding: 6px 0 6px 0;
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 9px;
   > div {
     display: flex;
     flex-direction: column;
+    gap: 9px;
+    > :first-child {
+      font-weight: 600;
+    }
+    > :last-child {
+      font-weight: lighter;
+      transform: translateX(-7px);
+    }
   }
   > span {
     line-height: 20px;
