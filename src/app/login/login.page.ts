@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonCol, IonInput, IonButton, IonIcon, IonTabs, IonItem, IonLabel } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonInput, IonButton, IonIcon, IonTabs, IonItem, IonLabel } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
 import recentlyPlayed from '../../assets/mockdata/recentlyPlayed.json';
@@ -28,10 +28,13 @@ import jumpBackIn from '../../assets/mockdata/jumpBackIn.json';
     IonCol,
     IonInput,
     IonButton,
+    IonGrid,
     ReactiveFormsModule,
   ]
 })
 export class LoginPage implements OnInit {
+
+  labelsWidth: number = 8;
 
   data = [
     {

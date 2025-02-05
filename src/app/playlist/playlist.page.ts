@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonCol, IonInput, IonButton, IonIcon, IonTabs, IonTabBar, IonTabButton, IonLabel } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonGrid, IonToolbar, IonRow, IonCol, IonInput, IonButton, IonIcon, IonTabs, IonTabBar, IonTabButton, IonLabel } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-playlist',
@@ -23,7 +23,8 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonCol, IonInput, 
     IonButton,
     IonTabBar,
     IonTabButton,
-    IonLabel
+    IonLabel,
+    IonGrid
   ]
 })
 export class PlaylistPage implements OnInit {

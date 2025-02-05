@@ -1,47 +1,88 @@
-<ion-content [fullscreen]="true">
-   <div class="background-container">
-      <div class="login-container">
-         <img src="/assets/images/spotify.png" class="spotify-logo spotify-logo-login">
-         
-         <div class="sign-in-container">
-            <h3 class="sign-in-header">Sign In</h3>
-            <label class="sign-in-label">If You Need Any Support <span class="accent">Click Here</span></label>
-         </div>
+<ion-content [fullscreen]="true" class="background-container">
 
-         <form (submit)="onLogin()" [formGroup]="loginForm">
+   <!-- Spotify Logo -->
+   <ion-grid [fixed]="true">
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="5">
+            <img src="/assets/images/spotify.png" class="spotify-logo-login">
+         </ion-col>
+		</ion-row>
+	</ion-grid>
 
-            <div class="input-container">
-               <input type="email" formControlName="email" required class="input" placeholder="Enter User Name Or Email">
+   <!-- Header -->
+   <ion-grid [fixed]="true">
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="{{ labelsWidth }}">
+            <div class="sign-in-container">
+               <h3 class="sign-in-header">Sign In</h3>
+               <label class="primary">If You Need Any Support <span class="accent">Click Here</span></label>
             </div>
+         </ion-col>
+		</ion-row>
+	</ion-grid>
 
-            <div class="input-container">
-               <input type="email" formControlName="email" required class="input" placeholder="Password">
-            </div>
+   <!-- Form -->
+   <ion-grid>
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="10">
+            <form (submit)="onLogin()" [formGroup]="loginForm" class="login-form">
 
-
-            <label class="rec-pass-label">Recovery Password</label>
-
-
-            <div class="secondary-content">
-                  <button 
-                  class="btn btn-primary"
-                  [disabled]="!loginForm.valid"
-               >
-                  Sign In
-               </button>
-      
-               <label class="or-label">Or</label>
-
-               <div class="social-login-container">
-                  <img src="/assets/images/google.png" class="">
-                  <img src="/assets/images/apple.png" class="">
+               <div class="input-container">
+                  <input type="email" formControlName="email" required class="input" placeholder="Enter User Name Or Email">
+               </div>
+               <div class="input-container">
+                  <input type="email" formControlName="email" required class="input" placeholder="Password">
                </div>
 
-               <label class="register-label">Not A Member ? <span class="accent">Register Now</span></label>
-            </div>
-         </form>
+               <label class="rec-pass-label">Recovery Password</label>
 
-      </div>
-   </div>
-  
+               <div class="cta-container">
+                  <button 
+                     class="btn btn-primary"
+                     [disabled]="!loginForm.valid"
+                  >
+                     Sign In
+                  </button>
+               </div>
+            </form>
+         </ion-col>
+		</ion-row>
+	</ion-grid>
+
+   <!-- Or -->
+   <ion-grid>
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="11">
+            <div class="or-container">
+               <label class="or-label">Or</label>
+            </div>
+         </ion-col>
+		</ion-row>
+	</ion-grid>
+
+   <!-- Social Icons -->
+   <ion-grid>
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="10">
+            <div class="social-login-container">
+               <div class="social-login-row">
+                  <img src="/assets/images/google.png" alt="goolge">
+                  <img src="/assets/images/apple.png" alt="apple">
+               </div>
+            </div>
+         </ion-col>
+		</ion-row>
+	</ion-grid>
+
+   <!-- Not a member -->
+   <ion-grid [fixed]="true">
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="{{ labelsWidth }}">
+            <div class="sign-in-container">
+               <label class="primary register-label">Not A Member ? <span class="accent">Register Now</span></label>
+            </div>
+         </ion-col>
+      </ion-row>
+	</ion-grid>
+
 </ion-content>

@@ -81,39 +81,96 @@ ion-content {
   font-family: Inter var;
 }
 
-// --------------------------------------------------------------
-//  @ Login Styles
-// --------------------------------------------------------------
-
-.spotify-logo {
-   z-index: 9999;
-   position: absolute;
-   top: -70px;
-   left: 10px;
+:root{
+  --inputs-max-width: 344px;
 }
 
-.spotify-logo-login {
-  transform: scale(0.35);
+// --------------------------------------------------------------
+//  @ Fonts
+// --------------------------------------------------------------
+
+.primary{
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
 }
- 
+
+.accent{
+  font-weight: inherit;
+  font-size: inherit;
+  color: #48E73F;
+}
+
+// --------------------------------------------------------------
+//  @ Login View Styles
+// --------------------------------------------------------------
+
 .background-container {
   background-image: url('/assets/images/bg.jpg');
   background-size: cover;   /* Cover all the container */
   background-position: center;  /* Center image */
-  height: 100%;               
+  // height: 100%;               
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // color: white;             
+  // text-align: center;          
+  // padding: 20px;
+  // border-radius: 50px;        
+}
+
+.login-container{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// --------------------------------------------------------------
+//  @ Logo
+// --------------------------------------------------------------
+
+// .spotify-logo-absolute {
+//    z-index: 9999;
+//    position: absolute;
+//    top: -70px;
+//    left: 10px;
+// }
+
+.spotify-logo-login {
+  transform: scale(0.65) !important;
+}
+
+// --------------------------------------------------------------
+//  @ Sign-In Flag
+// --------------------------------------------------------------
+
+.sign-in-container{
+  text-align: center;
+  margin-bottom: 1.75rem;
+    // transform: translateY(-30px);
+}
+
+.sign-in-header{
+  font-weight: 700;
+  font-size: 23px;
+  color: #ffffff;
+}
+
+// --------------------------------------------------------------
+//  @ Form Styles
+// --------------------------------------------------------------
+
+.login-form{
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  color: white;             
-  text-align: center;          
-  padding: 20px;
-  border-radius: 50px;        
 }
 
 .input-container{
   padding: 10px 0 10px 0;
+  text-align: center;
   > input {
-    width: 344px;
+    max-width: var(--inputs-max-width);
     border-radius: 40px;
     padding: 36px;
     border: solid 1px #bbaaaa;
@@ -126,41 +183,22 @@ ion-content {
   }
 }
 
-.sign-in-container{
-    transform: translateY(-30px);
+.rec-pass-label{
+  line-height: 80px;
+  max-width: var(--inputs-max-width);
+  padding: 0 0.5rem 0 0.5rem;
+  // transform: translateX(400px) !important;
 }
 
-.sign-in-header{
-  font-weight: 700;
-  font-size: 23px;
-  color: #ffffff;
-}
-
-.sign-in-label, .register-label{
-  font-weight: 400;
-  font-size: 14px;
-  color: #ffffff;
-}
-
-.accent{
-  font-weight: inherit;
-  font-size: inherit;
-  color: #48E73F;
-}
-
-.social-login-container{
-  z-index: 9999;
-  position: absolute;
-  top: 80%;
+.cta-container{
+  padding: 10px 0 10px 0;
   display: flex;
-  flex-direction: row;
-  gap: 100px;
-  left: 30%;
+  flex-direction: column;
 }
-
 
 .btn{
-  width: 344px;
+  max-width: var(--inputs-max-width);
+  width: calc(var(--inputs-max-width) / 1.175);
   border-radius: 40px;
   padding: 36px;
   background-color: #18D780;
@@ -169,34 +207,33 @@ ion-content {
   color: white;
 }
 
-.login-container{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-.secondary-content{
-  display: flex;
-  flex-direction: column;
-}
+// --------------------------------------------------------------
+//  @ Login View - Bottom Component Styles
+// --------------------------------------------------------------
 
-.rec-pass-label{
-  line-height: 80px;
-  transform: translateX(400px) !important;
+// --------------------------------------------------------------
+//  @ Login View - Or
+// --------------------------------------------------------------
+
+.or-container{
+  display: flex;
 }
 
 .or-label{
   line-height: 5rem;
   position: relative;
+  margin: auto;
+  max-width: var(--inputs-max-width);
 }
-
 
 .or-label::before, .or-label::after{
   position: absolute;
   content: '';
   border: solid 0.5px rgba($color: #ffffff, $alpha: 0.6);
-  width: 150px;
+  width: 130px;
   top: 40px;
+  margin: 0 40px 0 40px;
 }
 
 .or-label::before{
@@ -207,11 +244,38 @@ ion-content {
   right: 0px;
 }
 
-.register-label{
-  line-height: 80px;
-  transform: translateY(80px) !important;
+// --------------------------------------------------------------
+//  @ Login View - Social Container
+// --------------------------------------------------------------
+
+.social-login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
 }
 
+.social-login-container-absolute{
+  // z-index: 9999;
+  // position: absolute;
+  // top: 80%;
+  // display: flex;
+  // flex-direction: row;
+  // gap: 100px;
+  // left: 30%;
+}
+
+.social-login-row{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.register-label{
+  text-align: center;
+  margin: auto;
+  line-height: 80px;
+}
 
 // --------------------------------------------------------------
 //  @ Play List Styles
