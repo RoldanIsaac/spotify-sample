@@ -37,7 +37,7 @@
 @import '@ionic/angular/css/palettes/dark.system.css';
  
 ion-content {
-  --background: white; /* Ion content transparent */
+  --background: transparent; /* Ion content transparent */
 }
 
  @font-face {
@@ -105,329 +105,338 @@ ion-content {
 //  @ Login View Styles
 // --------------------------------------------------------------
 
-.background-container {
-  background-image: url('/assets/images/bg.jpg');
-  background-size: cover;   /* Cover all the container */
-  background-position: center;  /* Center image */
-  height: 100vh;               
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // color: white;             
-  // text-align: center;          
-  // padding: 20px;
-  // border-radius: 50px;        
-}
+@layer login {
 
-.login-container{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  .background-container {
+    background-image: url('/assets/images/bg.jpg');
+    background-size: cover;   /* Cover all the container */
+    background-position: center;  /* Center image */
+    height: 100vh;               
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // color: white;             
+    // text-align: center;          
+    // padding: 20px;
+    // border-radius: 50px;        
+  }
 
-// --------------------------------------------------------------
-//  @ Logo
-// --------------------------------------------------------------
+  .login-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-// .spotify-logo-absolute {
-//    z-index: 9999;
-//    position: absolute;
-//    top: -70px;
-//    left: 10px;
-// }
+  // --------------------------------------------------------------
+  //  @ Logo
+  // --------------------------------------------------------------
 
-.spotify-logo-login {
-  transform: scale(0.65) !important;
-}
+  // .spotify-logo-absolute {
+  //    z-index: 9999;
+  //    position: absolute;
+  //    top: -70px;
+  //    left: 10px;
+  // }
 
-// --------------------------------------------------------------
-//  @ Sign-In Flag
-// --------------------------------------------------------------
+  .spotify-logo-login {
+    transform: scale(0.65) !important;
+  }
 
-.sign-in-container{
-  text-align: center;
-  margin-bottom: 1.75rem;
-    // transform: translateY(-30px);
-}
+  // --------------------------------------------------------------
+  //  @ Sign-In Flag
+  // --------------------------------------------------------------
 
-.sign-in-header{
-  font-weight: 700;
-  font-size: 23px;
-  color: #ffffff;
-}
+  .sign-in-container{
+    text-align: center;
+    margin-bottom: 1.75rem;
+      // transform: translateY(-30px);
+  }
 
-// --------------------------------------------------------------
-//  @ Form Styles
-// --------------------------------------------------------------
+  .sign-in-header{
+    font-weight: 700;
+    font-size: 23px;
+    color: #ffffff;
+  }
 
-.login-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  // --------------------------------------------------------------
+  //  @ Form Styles
+  // --------------------------------------------------------------
 
-.input-container{
-  padding: 10px 0 10px 0;
-  text-align: center;
-  > input {
+  .login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-container{
+    padding: 10px 0 10px 0;
+    text-align: center;
+    > input {
+      max-width: var(--inputs-max-width);
+      border-radius: 40px;
+      padding: 36px;
+      border: solid 1px #bbaaaa;
+      background-color: rgba(217, 217, 217, 0.2);
+      color: white !important;
+    }
+    > input::placeholder {
+      color: white !important;
+      opacity: 1;
+    }
+  }
+
+  // --------------------------------------------------------------
+  //  @ Form Styles - Recovery Label
+  // --------------------------------------------------------------
+
+  .recovery-container{
+    padding: 10px 0 10px 0;
+    text-align: start;
+  }
+
+  .rec-pass-label{
+    line-height: 50px;
+    margin-bottom: 2rem;
+    margin-left: -7rem;
+    padding: 0 0.15rem 0 0.15rem;
+    font-size: 16px !important;
+  }
+
+  // --------------------------------------------------------------
+  //  @ Form Styles - CTA
+  // --------------------------------------------------------------
+
+  .cta-container{
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn{
     max-width: var(--inputs-max-width);
-    border-radius: 40px;
-    padding: 36px;
-    border: solid 1px #bbaaaa;
-    background-color: rgba(217, 217, 217, 0.2);
+    width: calc(var(--inputs-max-width) / 1.175);
+    border-radius: 40px !important;
+    padding: 36px !important;
+    background-color: #18D780;
+    font-weight: 700;
+    font-size: 20px;
     color: white !important;
   }
-  > input::placeholder {
-    color: white !important;
-    opacity: 1;
+
+  // --------------------------------------------------------------
+  //  @ Login View - Bottom Component Styles
+  // --------------------------------------------------------------
+  // --------------------------------------------------------------
+  //  @ Login View - Or
+  // --------------------------------------------------------------
+
+  .or-container{
+    display: flex;
   }
-}
 
-// --------------------------------------------------------------
-//  @ Form Styles - Recovery Label
-// --------------------------------------------------------------
+  .or-label{
+    line-height: 2.7rem;
+    position: relative;
+    margin: auto;
+    max-width: var(--inputs-max-width);
+    margin-bottom: 1rem;
+  }
 
-.recovery-container{
-  padding: 10px 0 10px 0;
-  text-align: start;
-}
+  .or-label::before, .or-label::after{
+    position: absolute;
+    content: '';
+    border: solid 0.3px rgba(255, 255, 255, 0.4);
+    width: 130px;
+    top: 0.7rem;
+    margin: 0 40px 0 40px;
+  }
 
-.rec-pass-label{
-  line-height: 50px;
-  margin-bottom: 2rem;
-  margin-left: -7rem;
-  padding: 0 0.15rem 0 0.15rem;
-  font-size: 16px !important;
-}
+  .or-label::before{
+    left: 0px;
+  }
 
-// --------------------------------------------------------------
-//  @ Form Styles - CTA
-// --------------------------------------------------------------
+  .or-label::after{
+    right: 0px;
+  }
 
-.cta-container{
-  padding: 10px 0 10px 0;
-  display: flex;
-  flex-direction: column;
-}
+  // --------------------------------------------------------------
+  //  @ Login View - Social Container
+  // --------------------------------------------------------------
 
-.btn{
-  max-width: var(--inputs-max-width);
-  width: calc(var(--inputs-max-width) / 1.175);
-  border-radius: 40px;
-  padding: 36px;
-  background-color: #18D780;
-  font-weight: 700;
-  font-size: 20px;
-  color: white;
-}
+  .social-login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
 
+  .social-login-container-absolute{
+    // z-index: 9999;
+    // position: absolute;
+    // top: 80%;
+    // display: flex;
+    // flex-direction: row;
+    // gap: 100px;
+    // left: 30%;
+  }
 
-// --------------------------------------------------------------
-//  @ Login View - Bottom Component Styles
-// --------------------------------------------------------------
+  .social-login-row{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
 
-// --------------------------------------------------------------
-//  @ Login View - Or
-// --------------------------------------------------------------
+  .register-label{
+    text-align: center;
+    margin: auto;
+    line-height: 80px;
+  }
 
-.or-container{
-  display: flex;
-}
-
-.or-label{
-  line-height: 2.7rem;
-  position: relative;
-  margin: auto;
-  max-width: var(--inputs-max-width);
-  margin-bottom: 1rem;
-}
-
-.or-label::before, .or-label::after{
-  position: absolute;
-  content: '';
-  border: solid 0.3px rgba(255, 255, 255, 0.4);
-  width: 130px;
-  top: 20px;
-  margin: 0 40px 0 40px;
-}
-
-.or-label::before{
-  left: 0px;
-}
-
-.or-label::after{
-  right: 0px;
-}
-
-// --------------------------------------------------------------
-//  @ Login View - Social Container
-// --------------------------------------------------------------
-
-.social-login-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 100px;
-}
-
-.social-login-container-absolute{
-  // z-index: 9999;
-  // position: absolute;
-  // top: 80%;
-  // display: flex;
-  // flex-direction: row;
-  // gap: 100px;
-  // left: 30%;
-}
-
-.social-login-row{
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-}
-
-.register-label{
-  text-align: center;
-  margin: auto;
-  line-height: 80px;
 }
 
 // --------------------------------------------------------------
 //  @ Play List Styles
 // --------------------------------------------------------------
 
-.playlist-view {
-  height: 100%;               
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  background-color: white !important;           
-  text-align: center;          
-  padding: 20px;
-  border-radius: 50px;        
+@layer playlist {
+
+  .playlist-view {
+    height: 100%;               
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: white !important;           
+    text-align: center;          
+    padding: 20px;
+    border-radius: 50px;        
+  }
+
+  // --------------------------------------------------------------
+  //  @ User Container
+  // --------------------------------------------------------------
+
+  .user-container{
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 130px;
+    border-bottom-left-radius: 130px;
+    height: 520px;
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
+  }
+
+  .user-data{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .avatar{
+    // object-fit: cover !important;
+    --side: 85px;
+    min-width: var(--side);
+    max-width: var(--side);
+    min-height: var(--side);
+    max-height: var(--side);
+    border-radius: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .user-email{
+    color: #686363;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .user-name{
+    color: black;
+    font-weight: 600;
+    font-size: 23px; 
+  }
+
+  .status-container{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+  }
+
+  .status{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .status-value{
+    color: black;
+    font-size: 25px;
+  }
+  .status-label{
+    color: black;
+    font-size: 21px;
+    font-weight: 100 !important;
+  }
+
+  .song-container{
+    max-height: 50px;
+    color: black;
+  }
+
+  // --------------------------------------------------------------
+  //  @ PlayList Container
+  // --------------------------------------------------------------
+
+  .playlist-label{
+    color: #3A3232;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  // --------------------------------------------------------------
+  //  @ PlayList Container - Track Data
+  // --------------------------------------------------------------
+
+  .track-content{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .album-art{
+    width: 50px;
+    height: 50px;
+  }
+
+  .track-length{
+    line-height: 40px;
+    font-weight: 200 !important;
+    margin: auto;
+    color: #686363;
+  }
+
+  .title{
+    font-weight: 600 !important;
+  }
+
+  .artist{
+    font-weight: 300 !important;
+    font-size: 16px;
+    font-weight: lighter !important;
+    white-space: nowrap;
+  }
+
+  .menu{
+    object-fit: cover;
+    width: 2.5rem;
+    size: 20px;
+    transform: scale(50%);
+  }
+
 }
 
-// --------------------------------------------------------------
-//  @ User Container
-// --------------------------------------------------------------
-
-.user-container{
-  padding-top: 180px;
-  display: flex;
-  flex-direction: column;
-  border-bottom-right-radius: 130px;
-  border-bottom-left-radius: 130px;
-  height: 520px;
-  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
-}
-
-.user-data{
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.avatar{
-  // object-fit: cover !important;
-  --side: 85px;
-  min-width: var(--side);
-  max-width: var(--side);
-  min-height: var(--side);
-  max-height: var(--side);
-  border-radius: 100%;
-  margin-bottom: 1rem;
-}
-
-.user-email{
-  color: #686363;
-  font-weight: 300;
-  font-size: 16px;
-}
-
-.user-name{
-  color: black;
-  font-weight: 600;
-  font-size: 23px; 
-}
-
-.status-container{
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-  justify-content: center;
-}
-
-.status{
-  display: flex;
-  flex-direction: column;
-}
-
-.status-value{
-  color: black;
-  font-size: 25px;
-}
-.status-label{
-  color: black;
-  font-size: 21px;
-  font-weight: 100 !important;
-}
-
-.song-container{
-  max-height: 50px;
-  color: black;
-}
-
-// --------------------------------------------------------------
-//  @ PlayList Container
-// --------------------------------------------------------------
-
-.playlist-label{
-  color: #3A3232;
-  font-size: 21px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-// --------------------------------------------------------------
-//  @ PlayList Container - Track Data
-// --------------------------------------------------------------
-
-.track-content{
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.album-art{
-  width: 50px;
-  height: 50px;
-}
-
-.track-length{
-  line-height: 40px;
-  font-weight: 200 !important;
-  margin: auto;
-  color: #686363;
-}
-
-.title{
-  font-weight: 600 !important;
-}
-
-.artist{
-  font-weight: 300 !important;
-  font-size: 16px;
-  font-weight: lighter !important;
-  white-space: nowrap;
-}
-
-.menu{
-  object-fit: cover;
-  width: 2.5rem;
-  size: 20px;
-  transform: scale(50%);
-}
+@layer login;
+@layer playlist;
