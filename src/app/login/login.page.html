@@ -27,15 +27,20 @@
          <ion-col size="10">
             <form (submit)="onLogin()" [formGroup]="loginForm" class="login-form">
 
+               <!-- Email -->
                <div class="input-container">
                   <input type="email" formControlName="email" required class="input" placeholder="Enter User Name Or Email">
                </div>
+
+               <!-- Password -->
                <div class="input-container">
                   <input type="email" formControlName="email" required class="input" placeholder="Password">
                </div>
 
+               <!-- Recovery -->
                <label class="rec-pass-label">Recovery Password</label>
 
+               <!-- CTA -->
                <div class="cta-container">
                   <button 
                      class="btn btn-primary"
