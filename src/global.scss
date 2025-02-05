@@ -110,7 +110,9 @@ ion-content {
   background-image: url('/assets/images/bg.jpg');
   background-size: cover;   /* Cover all the container */
   background-position: center;  /* Center image */
-  height: 100vh;               
+  height: 100vh;       
+  margin: 0;
+  padding: 0;        
   // display: flex;
   // justify-content: center;
   // align-items: center;
@@ -314,12 +316,10 @@ ion-content {
 // --------------------------------------------------------------
 
 @layer playlist {
-
-  // --------------------------------------------------------------
-  //  @ User Container
-  // --------------------------------------------------------------
-
-  .user-container{
+  
+  .shadowed-container{
+    width: 100% !important;
+    min-width: 100% !important;
     padding-top: 140px;
     display: flex;
     flex-direction: column;
@@ -329,6 +329,16 @@ ion-content {
     transform: scaleX(1.05);
     box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
   }
+
+  .left-arrow{
+    position: absolute;
+    top: -30%;
+    left: 8%;
+  }
+
+  // --------------------------------------------------------------
+  //  @ User Data
+  // --------------------------------------------------------------
 
   .user-data{
     padding: 2rem;

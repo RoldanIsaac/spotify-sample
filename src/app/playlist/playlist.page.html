@@ -1,20 +1,15 @@
 <ion-content [fullscreen]="true" class="playlist-view">
 
-	<!-- Left arrow -->
-   <ion-grid [fixed]="true">
-		<ion-row class="ion-justify-content-start">
-         <ion-col size="12" class="ion-no-padding">
-				<img src="/assets/images/left-arrow.svg" class="left-arrow">
-         </ion-col>
-		</ion-row>
-	</ion-grid>
-
 	<!-- User info -->
-	<ion-grid [fixed]="true" class="ion-no-margin">
+	<ion-grid [fixed]="true" class="ion-no-margin shadowed-container">
 		<ion-row class="ion-justify-content-center">
-         <ion-col size="12" class="ion-no-padding">
-				<div class="user-container">
-			
+         <ion-col size="12" class="ion-no-padding ion-no-margin">
+				
+				<div class="data-container">
+					<!-- Left arrow -->
+					<img src="/assets/images/left-arrow.svg" class="left-arrow">
+
+					<!-- User data -->
 					<div class="user-data">
 						<img src="/assets/images/avatar.jpg" class="avatar">
 						<label class="user-email">johndoe&#64;gmail.com</label>
