@@ -29,9 +29,7 @@ import { Router } from '@angular/router';
   ]
 })
 export class LoginPage implements OnInit {
-
   labelsWidth: number = 8;
-
   loginForm: FormGroup;
   
   constructor(

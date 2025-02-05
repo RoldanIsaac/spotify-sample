@@ -33,6 +33,7 @@ import { Router } from '@angular/router';
   ]
 })
 export class PlaylistPage implements OnInit {
+  labelsWidth: number = 8;
 
   @ViewChild('tabs') tabs: IonTabs;
   selected: string | undefined;

@@ -37,7 +37,7 @@
 @import '@ionic/angular/css/palettes/dark.system.css';
  
 ion-content {
-  --background: transparent; /* Ion content transparent */
+  --background: white; /* Ion content transparent */
 }
 
  @font-face {
@@ -316,10 +316,9 @@ ion-content {
   padding-top: 180px;
   display: flex;
   flex-direction: column;
-  width: 120%;
-  border-radius: 130px;
+  border-bottom-right-radius: 130px;
+  border-bottom-left-radius: 130px;
   height: 520px;
-  transform: translateY(-310px);
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
 }
 
@@ -385,17 +384,22 @@ ion-content {
 //  @ PlayList Container
 // --------------------------------------------------------------
 
-.playlist-container{
-  transform: translateY(180px);
-  width: 97%;
-  > h3 {
-    color: #3A3232;
-    font-size: 21px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    transform: translateX(-118px);
-  }
-  position: absolute;
+.playlist-label{
+  color: #3A3232;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+// --------------------------------------------------------------
+//  @ PlayList Container - Track Data
+// --------------------------------------------------------------
+
+.track-content{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .album-art{
@@ -403,35 +407,22 @@ ion-content {
   height: 50px;
 }
 
-.song-container{
-  margin: 0.875rem;
-  // padding: 6px 0 6px 0;
-  display: flex;
-  flex-direction: row;
-  gap: 9px;
-  > div {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    > :first-child {
-      font-weight: 600;
-    }
-    > :last-child {
-      font-weight: 300 !important;
-      transform: translateX(-7px);
-    }
-  }
-  > span {
-    line-height: 20px;
-    font-weight: 200 !important;
-    margin: auto;
-    color: #686363;
-  }
-} 
+.track-length{
+  line-height: 40px;
+  font-weight: 200 !important;
+  margin: auto;
+  color: #686363;
+}
+
+.title{
+  font-weight: 600 !important;
+}
 
 .artist{
+  font-weight: 300 !important;
   font-size: 16px;
   font-weight: lighter !important;
+  white-space: nowrap;
 }
 
 .menu{

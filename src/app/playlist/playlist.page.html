@@ -1,54 +1,79 @@
 <ion-content [fullscreen]="true">
 
-	<ion-grid>
-		<ion-row>
-		  <ion-col>1</ion-col>
-		  <ion-col>2</ion-col>
-		  <ion-col>3</ion-col>
+  
+   <ion-grid [fixed]="true">
+		<ion-row class="ion-justify-content-start">
+         <ion-col size="12" class="ion-no-padding">
+				<img src="/assets/images/left-arrow.svg" class="left-arrow">
+         </ion-col>
 		</ion-row>
 	</ion-grid>
 
-
-
-
-	<!-- <div class="playlist-view">
-		<div class="user-container">
+	 <!-- User Info -->
+	<ion-grid [fixed]="true">
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="12" class="ion-no-padding">
+				<div class="user-container">
 			
-			<div class="user-data">
-				<img src="/assets/images/avatar.jpg" class="avatar">
-				<label class="user-email">johndoe&#64;gmail.com</label>
-				<label class="user-name">John Doe</label>
-			</div>
-
-			<div class="status-container">
-				<div class="status">
-					<label class="status-value">1243</label>
-					<label class="status-label">Followers</label>
+					<div class="user-data">
+						<img src="/assets/images/avatar.jpg" class="avatar">
+						<label class="user-email">johndoe&#64;gmail.com</label>
+						<label class="user-name">John Doe</label>
+					</div>
+		
+					<div class="status-container">
+						<div class="status">
+							<label class="status-value">1243</label>
+							<label class="status-label">Followers</label>
+						</div>
+		
+						<div class="status">
+							<label class="status-value">779</label>
+							<label class="status-label">Following</label>
+						</div>
+					</div>
 				</div>
+         </ion-col>
+		</ion-row>
+	</ion-grid>
 
-				<div class="status">
-					<label class="status-value">779</label>
-					<label class="status-label">Following</label>
-				</div>
-			</div>
-		</div>
+   <!-- Playlist -->
+   <ion-grid [fixed]="true">
+		<ion-row class="ion-justify-content-center">
+         <ion-col size="10">
+				<h3 class="playlist-label">Public Playists</h3>
+         </ion-col>
+		</ion-row>
 
-		<div class="playlist-container">
+		<!-- Tracks For Loop -->
+		<ion-row class="ion-justify-content-center" *ngFor="let song of tracklist">
+         <ion-col size="11" class="ion-no-padding">
+				<ion-row>
+					<!-- Cover -->
+					<ion-col size="2">
+						<img src="/assets/images/cover.jpg" class="album-art">
+					</ion-col>
 
-			<h3>Public Playists</h3>
-			
-			<div class="song-container" *ngFor="let song of tracklist">
-				<img src="/assets/images/cover.jpg" class="album-art">
-				<div>
-					<label class="title">{{ song.title }}</label>
-					<label class="artist">{{ song.artist }}</label>
-				</div>
-				<span> 3:07 </span>
-				<img src="/assets/images/menu.png" class="menu">
-			</div>
+					<!-- Title | Artist -->
+					<ion-col size="6">
+						<div class="track-content">
+							<label class="title">{{ song.title }}</label>
+							<label class="artist">{{ song.artist }}</label>
+						</div>
+					</ion-col>
 
-	
-		</div>
-	</div> -->
- 
+					<!-- Length -->
+					<ion-col size="2">
+						<span class="track-length"> 3:07 </span>
+					</ion-col>
+
+					<!-- Menu -->
+					<ion-col size="2">
+						<img src="/assets/images/menu.png" class="menu">
+					</ion-col>
+				</ion-row>
+         </ion-col>
+		</ion-row>
+
+	</ion-grid>
 </ion-content>
